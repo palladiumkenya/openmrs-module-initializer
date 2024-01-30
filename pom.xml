@@ -60,7 +60,7 @@
         <openmrsPlatformVersion>${openmrsVersion2.1}</openmrsPlatformVersion>
 
         <!-- Modules compatibility -->
-        <appointmentsVersion>1.2.1</appointmentsVersion>
+        <appointmentsVersion>1.6.1</appointmentsVersion>
         <bahmniIeAppsVersion>1.1.0</bahmniIeAppsVersion>
         <bahmniCoreVersion>0.93-1.1.0</bahmniCoreVersion>
         <cohortModuleVersion>3.5.0</cohortModuleVersion>
@@ -157,7 +157,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.bahmni.module</groupId>
+            <groupId>org.kenyahmis.module</groupId>
             <artifactId>appointments-api</artifactId>
             <version>${appointmentsVersion}</version>
             <scope>provided</scope>
