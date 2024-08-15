@@ -116,8 +116,8 @@ public class AmpathFormsLoader extends BaseFileLoader {
 					// Retrievet the form resource and update with the JSON schema and create clob
 					// data.
 					
-					ClobDatatypeStorage clobData = datatypeService.getClobDatatypeStorageByUuid(formService.getFormResource(
-					    form, "JSON schema").getValueReference());
+					ClobDatatypeStorage clobData = datatypeService.getClobDatatypeStorageByUuid(
+					    formService.getFormResource(form, "JSON schema").getValueReference());
 					if (clobData != null) {
 						clobData.setValue(jsonString);
 						datatypeService.saveClobDatatypeStorage(clobData);
@@ -190,7 +190,7 @@ public class AmpathFormsLoader extends BaseFileLoader {
 				}
 			}
 		} else if (formService.getForm(formName) != null) { // ISSUE-150 If form with name present then retire it and
-			                                                // create a new one
+		                                                    // create a new one
 			Form form = formService.getForm(formName);
 			formService.retireForm(form, "Replaced with new version by Iniz");
 			createNewForm(formUuid, formName, formDescription, formPublished, formRetired, encounterType, formVersion,
