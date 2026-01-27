@@ -35,8 +35,8 @@ jobs:
             <servers>
               <server>
                 <id>palladium-kenya</id>
-                <username>${GITHUB_ACTOR}</username>
-                <password>${GITHUB_TOKEN}</password>
+                <username>${{ secrets.MVN_ACTOR }}</username>
+                <password>${{ secrets.MVN_TOKEN }}</password>
               </server>
             </servers>
           </settings>
@@ -45,5 +45,5 @@ jobs:
       - name: Publish package
         run: mvn --batch-mode deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.MVN_TOKEN }}
+          GITHUB_ACTOR: ${{ secrets.MVN_ACTOR }}
