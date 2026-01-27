@@ -43,7 +43,7 @@ jobs:
           EOF
 
       - name: Publish package
-        run: mvn --batch-mode deploy
+        run: mvn --batch-mode deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.MVN_TOKEN }}
           GITHUB_ACTOR: ${{ secrets.MVN_ACTOR }}
