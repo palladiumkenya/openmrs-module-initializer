@@ -1,6 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -300,7 +299,7 @@
             <version>${serializationVersion}</version>
             <scope>test</scope>
         </dependency>
-        
+
         <!-- Depedency required to compile against Java 11 -->
         <dependency>
             <groupId>javax.annotation</groupId>
@@ -433,16 +432,27 @@
     </pluginRepositories>
 
     <distributionManagement>
-      <repository>
-        <id>mks-repo</id>
-        <name>Mekom Solutions Nexus Releases</name>
-        <url>https://nexus.mekomsolutions.net/repository/maven-releases</url>
-      </repository>
-      <snapshotRepository>
-        <id>mks-repo-snapshots</id>
-        <name>Mekom Solutions Nexus Snapshots</name>
-        <url>https://nexus.mekomsolutions.net/repository/maven-snapshots</url>
-      </snapshotRepository>
+        <!-- <repository>
+            <id>mks-repo</id>
+            <name>Mekom Solutions Nexus Releases</name>
+            <url>https://nexus.mekomsolutions.net/repository/maven-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>mks-repo-snapshots</id>
+            <name>Mekom Solutions Nexus Snapshots</name>
+            <url>https://nexus.mekomsolutions.net/repository/maven-snapshots</url>
+        </snapshotRepository> -->
+
+        <repository>
+            <id>palladium-kenya</id>
+            <name>Palladium Kenya GitHub</name>
+            <url>https://maven.pkg.github.com/palladiumkenya/openmrs-module-initializer</url>
+        </repository>
+        <snapshotRepository>
+            <id>palladium-kenya</id>
+            <name>Palladium Kenya GitHub</name>
+            <url>https://maven.pkg.github.com/palladiumkenya/openmrs-module-initializer</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
